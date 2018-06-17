@@ -1,0 +1,14 @@
+.guides-section {
+  background: $colorGrayBackground;
+  text-align: center;
+  padding: $lineHeight 0 $lineHeight*4;
+
+}
+.guides-section-left{
+  	@extend .guides-section;
+  	text-align: left;
+}
+
+.guides-section .last {
+	padding-bottom: $lineHeight;
+}

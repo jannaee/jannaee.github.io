@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" class="no-js no-touch" itemscope itemtype="http://schema.org/Article">
+  <head>
+    <meta charset="utf-8" >
+    <meta name="description" content="Portfolio of Jannaee Sick created with Google's Web Starter Kit.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
+    <meta itemprop="name" content="Jannaee Sick Web Portfolio">
+    <meta itemprop="description" content="Jannaee Sick Web Portfolio">
+    <link href='http://fonts.googleapis.com/css?family=Magra:400,700|Poly:400italic,400' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="styles/components.css">
+
+	<!-- XML Call -->
+	<script>
+		function loadXMLDoc(dname){
+			if (window.XMLHttpRequest){
+			  xhttp = new XMLHttpRequest();
+			} else {
+			  xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			xhttp.open("GET",dname,false);
+			xhttp.send();
+			return xhttp.responseXML;
+		}
+	</script>	
+
+	
+</head>
+	<body id="noRate">
+		<div id="ad1">
+			<div id="frameOne" class="animated fadeInLeft">
+				<h3>Mortgage Rates Are Low.</h3>
+				<h2>Demand the<br/>same of your payment.</h2>
+			</div><!--end of frameOne-->
+			<div id="eblogo"><img src="/images/workScreenshots/everbank.png" width="137" height="25"></div>
+			<div id="rates" class="animatedMedium fadeInUp">
+				<p class="subhead">5/1 ADJUSTABLE RATE</p>
+					<script>
+					//Call set XML as global variable
+					xmlDoc=loadXMLDoc("mediaplexMortgageRates.xml");
+						var rate = xmlDoc.getElementsByTagName("Rate");
+						var apr = xmlDoc.getElementsByTagName("Apr");
+						document.write("<h1>"+rate[2].childNodes[0].nodeValue+"<sup class='percent'>%</sup> / "+ apr[2].childNodes[0].nodeValue+"<sup class='percent'>%</sup><span class='smallAPR'>APR<sup>4*</sup></span></h1>");
+					</script>
+				<p class="disclosure">*Rate/Annual Percentage Rate</p>
+			</div>
+
+			<div class="getARate">
+				<h4 class="animatedSlow fadeInUp"><a class="cta" href="#" target="_blank">
+					Get a personalized<br/>rate quote ></a>
+				</h4>
+			</div><!--end of get personalized rates-->
+
+			<div id="complianceLogo" class="animatedSlow fadeInUp">
+				<p class="disclosure">NMLS ID: 000000</p>
+				<img src="/images/workScreenshots/ehl.png" width="18" height="19">
+				<img src="/images/workScreenshots/fdic-small.png" width="55" height="19">
+			</div>
+		</div><!--end of ad1-->
+	</body>
+	<!--Fall Back images in case the rates are not connecting-->
+	<script type="text/javascript">
+		if (xhttp.status != 200){
+			document.getElementById('noRate').innerHTML='';
+			document.write('<div style="height:300px; width:250px; background-color:#000; margin: 40px auto 0;"><a href="<mpvc/>http://<mpck/>" target="_blank"><img src="/images/workScreenshots/fallback-300x250Trad.jpg" width="300" height="250" border="0" alt=""></a></div>');
+		};
+	</script>
+</html>

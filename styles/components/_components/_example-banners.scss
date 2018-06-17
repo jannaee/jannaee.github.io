@@ -1,0 +1,372 @@
+/**
+*
+* Example Banners
+*
+**/
+
+/*@font-face {
+      font-family: 'icons';
+      src: url('ebicons-webfont-eot.eot');
+      src: url('ebicons-webfont-eot.eot?#iefix') format('embedded-opentype'),
+         url('ebicons-webfont-woff.woff') format('woff'),
+         url('ebicons-webfont-ttf.ttf') format('truetype'),
+         url('ebicons-webfont-svg.svg#icons') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    } 
+*/
+
+    a.cta {
+      color: #ef452c;
+      text-decoration: none;
+    }
+
+    a.cta:visited {color: #ef452c;}
+
+    a.cta:hover {
+      color: #28a995;
+      text-decoration: underline;
+    }
+
+    #ad1 #frameOne{
+        z-index: 4;
+        position: relative;
+        overflow: visible;
+        left: 20px;
+        top: 25px;
+    }
+
+    #ad1{
+      padding: 0;
+      margin:40px auto 0; 
+      background-color: #000000;
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      color: #ffffff;
+      width: 300px;
+      height: 250px;
+      overflow: hidden;
+      position: relative;
+      opacity: 1; 
+    }
+
+    /*5/1 Arm...*/
+    #ad1 p.subhead{
+      color: #28a995;
+      font-size: 14px;
+      margin-bottom: 0px; 
+      font-weight: bold;
+
+    }
+
+    /*3.7 Rates...*/
+    #ad1 h1 {
+      margin: 0;
+      padding: 0;
+      display: block;
+      font-weight: bold;
+      font-size: 32px;
+      white-space: nowrap;
+    }
+
+    #rates{ 
+      position: relative;
+      top: -175px;
+      z-index: 4;
+      background-color: #000000;
+      height: 177px;
+      padding: 5px 10px 0 10px;
+      left: 10px;
+    }
+
+    /*Demand the same*/
+    #ad1 h2 { 
+      position: relative;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 30px;
+      margin-top: 10px;
+      overflow: hidden;
+    }
+
+    /*Mortgage Rates are low*/
+    #ad1 h3 {
+      padding: 0;
+      margin: 0;
+      font-weight: bold;
+      font-size: 17px;
+    }
+
+    /*Get a personalized rate quote*/
+    #ad1 h4 {
+      text-transform: none;
+      font-size: 20px;
+      color: #ef452c;
+      position: relative;
+      top: -270px;
+      z-index: 5;
+      background-color: #000000;
+      height: 36px; 
+      line-height: 27px;
+      left: 19px;
+    }
+
+    #ad1 h4 span {
+      font-family: 'icons';
+      font-size: 15px;
+      vertical-align: middle;
+    }
+
+    /*Rate/Annual Percentage*/
+    #ad1 .disclosure {
+      color: #969696;
+      text-transform: none;
+      margin: 0;
+      padding: 0;
+      font-size: 12px;
+    }
+
+    #ad1 span.smallAPR {
+      font-size: 40%;
+      line-height: 16px
+      
+    }
+
+    #ad1 sup.percent {
+      font-size: 15px;
+    }
+
+    #ad1 #logo {
+      padding: 35px 0 0 0;
+      z-index: 4
+    }
+
+    #ad1 #eblogo{
+      z-index: 5;
+      position: relative;
+      top: 50px;
+      left: 21px;
+    }
+
+    #ad1 #complianceLogo{
+      position: relative;
+      top: -258px;
+      left: 199px
+    }
+
+    #ad1 #complianceLogo p{
+      position: relative;
+      left: -14px; 
+      font-size: 12px;
+      width: 119px;
+      top:-4px;
+    }
+
+  /*IE7 and IE8 Rates*/
+
+    .ie7 #rates{
+      top: -139px;
+      height: 156px;
+    }
+    
+    .ie7 h4, .ie8 h4{
+      font-size: 20px;
+      top: -292px;
+      left: 11px; 
+    } 
+
+    .ie7 #ad1 h4{
+      top: -256px;
+    }
+
+    .ie7 #ad1 #complianceLogo{
+      top: -212px;      
+    }
+
+    .ie8 #ad1 #complianceLogo{
+      top: -254px;      
+    }
+
+    .ie7 #ad1 #complianceLogo p{
+      left: -10px;
+      top: -3px;
+      font-size: 10px;  
+    }
+
+    .ie8 #ad1 #complianceLogo p {
+      left: -27px;
+    }
+
+    .ie7 .getARate{
+      position: relative;
+      left: -4px;
+      z-index: 6;
+      top: 17px
+    }
+
+  /*Animations*/
+    .animated{
+      -webkit-animation-fill-mode:both;
+      -moz-animation-fill-mode:both;
+      -ms-animation-fill-mode:both;-o-animation-fill-mode:both;
+      animation-fill-mode:both;
+      -webkit-animation-duration:2s;
+      -moz-animation-duration:2s;
+      -ms-animation-duration:2s;
+      -o-animation-duration:2s;
+      animation-duration:2s;
+    }
+    .animatedMedium{
+      -webkit-animation-fill-mode:both;
+      -moz-animation-fill-mode:both;
+      -ms-animation-fill-mode:both;-o-animation-fill-mode:both;
+      animation-fill-mode:both;
+      -webkit-animation-duration:5s;
+      -moz-animation-duration:5s;
+      -ms-animation-duration:5s;
+      -o-animation-duration:5s;
+      animation-duration:5s;
+    }
+    .animatedSlow{
+      -webkit-animation-fill-mode:both;
+      -moz-animation-fill-mode:both;
+      -ms-animation-fill-mode:both;-o-animation-fill-mode:both;
+      animation-fill-mode:both;
+      -webkit-animation-duration:8s;
+      -moz-animation-duration:8s;
+      -ms-animation-duration:8s;
+      -o-animation-duration:8s;
+      animation-duration:8s;
+    }
+    @-webkit-keyframes fadeInLeft {
+      0% {
+        opacity: 0;
+        -webkit-transform: translateX(-20px);
+      }
+      
+      100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+      }
+    }
+
+    @-moz-keyframes fadeInLeft {
+      0% {
+        opacity: 0;
+        -moz-transform: translateX(-20px);
+      }
+      
+      100% {
+        opacity: 1;
+        -moz-transform: translateX(0);
+      }
+    }
+
+    @-o-keyframes fadeInLeft {
+      0% {
+        opacity: 0;
+        -o-transform: translateX(-20px);
+      }
+      
+      100% {
+        opacity: 1;
+        -o-transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeInLeft {
+      0% {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .fadeInLeft {
+      -webkit-animation-name: fadeInLeft;
+      -moz-animation-name: fadeInLeft;
+      -o-animation-name: fadeInLeft;
+      animation-name: fadeInLeft;
+    }
+    .fadeIn {
+      -webkit-animation-name: fadeIn 7s 1 ease-in-out;
+      -moz-animation-name: fadeIn 7s 1 ease-in-out;
+      -o-animation-name: fadeIn 7s 1 ease-in-out;
+      animation-name: fadeIn 7s 1 ease-in-out;
+    }
+
+    @-webkit-keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+      }
+      80% {
+        opacity: 0;
+        -webkit-transform: translateY(10px);
+      }
+      100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+      }
+    }
+
+    @-moz-keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        -moz-transform: translateY(20px);
+      }
+
+      80% {
+        opacity: 0;
+        -moz-transform: translateY(10px);
+      }
+      
+      100% {
+        opacity: 1;
+        -moz-transform: translateY(0);
+      }
+    }
+
+    @-o-keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        -o-transform: translateY(20px);
+      }
+      
+      80% {
+        opacity: 0;
+        -o-transform: translateY(10px);
+      }
+
+      100% {
+        opacity: 1;
+        -o-transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      
+      80% {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .fadeInUp {
+      -webkit-animation-name: fadeInUp;
+      -moz-animation-name: fadeInUp;
+      -o-animation-name: fadeInUp;
+      animation-name: fadeInUp;
+    }

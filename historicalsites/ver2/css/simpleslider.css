@@ -1,0 +1,78 @@
+		#slider {
+		  position: relative;
+		  overflow: hidden;
+		  margin: 20px auto 0 auto;
+		  border-radius: 4px;
+		}
+
+		#slider ul {
+		  position: relative;
+		  margin: 0;
+		  padding: 0;
+		  height: 200px;
+		  list-style: none;
+		}
+
+		#slider ul li {
+		  position: relative;
+		  display: block;
+		  float: left;
+		  margin: 0;
+		  padding: 0;
+		  width: 300px;
+		  height: 300px;
+		  background: #ccc;
+		  text-align: center;
+		  line-height: 300px;
+		}
+
+		a.control_prev, a.control_next {
+		  position: absolute;
+		  top: 40%;
+		  z-index: 999;
+		  display: block;
+		  padding: 4% 3%;
+		  width: 16%;
+		  height: auto;
+		  background: #2a2a2a;
+		  color: #fff;
+		  text-decoration: none;
+		  font-weight: 600;
+		  font-size: 18px;
+		  opacity: 0.8;
+		  cursor: pointer;
+		}
+
+		a.control_prev:hover, a.control_next:hover {
+		  opacity: 1;
+		  -webkit-transition: all 0.2s ease;
+		}
+
+		a.control_prev {
+		  border-radius: 0 10px 10px 0;
+		  left: -8px
+		}
+
+		a.control_next {
+		  right: -8px;
+		  border-radius: 10px 0 0 10px;
+		}
+
+		.slider_option {
+		  position: relative;
+		  margin: 10px auto;
+		  width: 160px;
+		  font-size: 18px;
+		}
+
+/*If the min width is 665px*/
+/*@media screen and (min-width: 41.6em) { 
+
+			#slider{
+				padding:20px;
+				background-color: white;
+
+			}
+			body{background-color: black}
+
+}*/

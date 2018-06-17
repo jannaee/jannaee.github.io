@@ -1,0 +1,61 @@
+/**
+*
+* Home page
+*
+**/
+
+.page--index {
+	margin-top: 5%;
+  background-color: $colorPurple;
+  text-align: center;
+  color: $colorWhite;
+}
+
+#foot a{
+  color: $colorWhite;
+  text-decoration: none;
+  text-align: center;
+}
+
+h4 { white-space: nowrap; }
+
+.home-featured-section a{
+	color: $colorWhite;
+	text-decoration: none;
+	padding: 10px;
+}
+
+/* Bring in minor animation for this graphic
+.home-featured-section img:hover {
+
+}
+*/
+#foot a:hover{
+    color: $colorTeal;
+  }
+
+@media (min-width: 800px) {
+  /*Will only effect media with the width of 800px or wider*/
+  .home-featured-section img {
+      width: 50%;
+    }
+
+ }
+
+ @media (max-width: 799px) {
+  /*Will only effect media with the width of 799px or smaller*/
+    .home-featured-section img {
+      width: 80%;
+    }
+    #foot a:hover{
+        background-color: $colorTealSecondary;
+        padding: $lineHeight/2;
+      }    
+ }
+
+  @media (max-width: 525px) {
+  /*Will only effect media with the width of 525px or smaller*/
+    .home-featured-section img {
+      width: 100%;
+    }
+ }
