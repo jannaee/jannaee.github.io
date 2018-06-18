@@ -1533,9 +1533,7 @@ footer#g-footer {
 *
 **/
 .featured-section {
-  background: #7b5294;
   text-align: center;
-  color: #ffffff;
   padding-bottom: 10%;
 }
 
@@ -3628,13 +3626,13 @@ a.cta:hover {
 * Styleguide
 *
 **/
-.page--styleguide {
-  /*  section {
+ /*.page--styleguide {
+   section {
       margin-bottom: $lineHeight*2;
       padding-bottom: $lineHeight*3 - 1;
   
-    }*/
-}
+    
+}}*/
 .page--styleguide .styleguide__module-title {
   margin-bottom: 26px;
 }
