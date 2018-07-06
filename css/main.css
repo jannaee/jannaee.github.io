@@ -225,11 +225,13 @@ p {
     nav.scrollUp {
         transform: translateY(-800px);
     }
+
     nav li a {
         border: none;
         font-size: 20px;
         background-color: #fff;
     }
+
     nav li a:hover {
         width: 100%;
         margin: 0;
@@ -237,18 +239,11 @@ p {
         color: #22b797;
         border-radius: 0;
     }    
-    nav li {
-        border-bottom: 1px solid #15909f;
-        font-size: 20px;
-        white-space: nowrap;
-        width: 100%
-    }
-    nav li:last-child {
-        border-bottom: none;
-    }
-    .navbar-menu li{
+ 
+    .navbar-menu {
         margin: 0;
     }
+
     .nav-container {
         background-color: #fff;
         min-width: 300px;
