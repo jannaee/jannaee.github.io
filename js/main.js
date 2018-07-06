@@ -3,7 +3,7 @@
 'use strict';
 
 $(document).ready(function () {
-    $('a[href*=#]').each(function () {
+    $("a[href*='#']").each(function () {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
             && location.hostname == this.hostname
             && this.hash.replace(/#/, '')) {
@@ -40,3 +40,14 @@ $(document).ready(function () {
         c = currentScrollTop;
     });
 });
+
+
+//Hamburger icon for small screens
+function openHamNav(){
+   let x = document.getElementById('myHamNav');
+   if (x.className === "nav-container") {
+       x.className += " responsive";
+   } else {
+       x.className = "nav-container";
+   }
+}

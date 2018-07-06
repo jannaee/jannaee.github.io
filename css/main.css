@@ -56,6 +56,7 @@ nav li a:active {
     color: #fff;
     opacity: 1;
     border-bottom: 2px solid #fff;
+    background-color:#4caf50;
 }
 
 nav a:hover {
@@ -98,8 +99,11 @@ nav ul.navbar-menu {
     width: 80%;
     margin: 0 auto;
     clear: both;
+    overflow: hidden;
 }
-
+.nav-container .icon {
+    display: none;
+}
 
 footer {
     grid-row-start: 2;
@@ -172,7 +176,7 @@ p {
 }
 
 #sect3 {
-    background: url(../img/slide3.jpg) 50% 0 no-repeat fixed;
+    /* background: url(../img/slide3.jpg) 50% 0 no-repeat fixed; */
     color: #fff;
     height: 600px;
     padding: 170px 0 0 0;
@@ -187,7 +191,7 @@ p {
 }
 
 #sect5 {
-    background: url(../img/slide5.jpg) 50% 0 no-repeat fixed;
+    /* background: url(../img/slide5.jpg) 50% 0 no-repeat fixed; */
     height: 200px;
     margin: 0 auto;
     padding: 250px 0;
@@ -250,5 +254,24 @@ p {
         min-width: 300px;
         width: 100%;
         padding-left: 80px; 
+    }
+
+    .nav-container a:not(:first-child){
+        display:none;
+    }
+    .nav-container a.icon {
+        float: right;
+        display: block;
+    }
+    .nav-container.responsive {position: relative;}
+    .nav-container.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .nav-container.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
     }
   } 
