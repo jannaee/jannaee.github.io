@@ -13,7 +13,7 @@ $(document).ready(function () {
             if ($target) {
                 let targetOffset = $target.offset().top;
                 $(this).click(function () {
-                    $("#nav li a").removeClass("active");
+                    $(".navbar-menu a").removeClass("active");
                     $(this).addClass('active');
                     $('html, body').animate({ scrollTop: targetOffset }, 1000);
                     return false;
