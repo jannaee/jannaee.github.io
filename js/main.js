@@ -22,6 +22,7 @@ $(document).ready(function () {
     });
 });
 
+//https://codemyui.com/hide-header-navigation-on-scroll-down-and-show-on-scroll-up/
 $(document).ready(function () {
     let c, currentScrollTop = 0,
         navbar = $('nav');

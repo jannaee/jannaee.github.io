@@ -1,6 +1,9 @@
-*, *:before, *:after {
+*, 
+*:before, 
+*:after {
     box-sizing: border-box;
 }
+
 html {
     height: 100%;
     background-color:#15909f;
@@ -28,6 +31,11 @@ h1, h2, h3, h4, h5 {
     font-family: 'Poppins', sans-serif;
 }
 
+footer  h4{
+    font-family: "Spectral", serif;
+    font-weight: 400;
+}
+
 a {
     margin-top: 0px;
     margin-bottom: 20px;
@@ -35,6 +43,7 @@ a {
     font-size: 14px;
     font-family: 'Poppins', sans-serif;
 }
+
 /* NAVIGATION STYLES */
 nav li a {
     padding: 7px 7px 7px 7px;
@@ -42,11 +51,13 @@ nav li a {
     border-radius: 3px;
     text-decoration: none;
 }
+
 nav li a:active {
     color: #fff;
     opacity: 1;
     border-bottom: 2px solid #fff;
 }
+
 nav a:hover {
     text-decoration: underline;
     background-color: #15909f; 
@@ -67,6 +78,7 @@ nav {
     z-index: 9998;
     transition: all 0.5s;
 }
+
 nav.scrollUp {
     transform: translateY(-80px);
 }
@@ -88,41 +100,20 @@ nav ul.navbar-menu {
     clear: both;
 }
 
-#logo {
-    text-transform: uppercase;
-    float: left;
-    font-weight: 800;
-    font-size: 20px;
-}
-
-nav button {
-    background: none;
-    width: 30px;
-    height: 40px;
-    margin-top: 20px;
-    border: none;
-    display: inline-block;
-    cursor: pointer;
-    display: none;
-}
-
-nav button span {
-    width: 30px;
-    height: 40px;
-    height: 2px;
-    background: #333;
-    display: block;
-    margin: 5px 0;
-}
 
 footer {
     grid-row-start: 2;
     grid-row-end: 3;
     color: #15909f;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Spectral', serif;
+    font-weight: 200i;
     text-align: center;
-    padding-top: 50px;
-    height: 70px;
+    padding: 50px 50px 50px 50px;
+    height: 250px;
+}
+.connectWithMe li {
+    display: inline-block;
+    padding: 8px;
 }
 
 header {
@@ -138,11 +129,11 @@ main {
     max-width: 90vw;
 }
 
-
 h1 {
     font-size: 60px;
     line-height: 60px;
 }
+
 h2 {
     margin-top: 0px;
     margin-bottom: 20px;
@@ -155,7 +146,6 @@ p {
     line-height: inherit;
     margin: auto;
 }
-
 
 /* Section styles */
 #sect1, #sect2 {
@@ -171,6 +161,7 @@ p {
     padding: 200px 0 260px 0;
     background-size: cover;
 }
+
 #sect2 {
     background-color: #fff;
     color: #333333;
@@ -179,6 +170,7 @@ p {
     overflow: hidden;
     padding: 200px 0;
 }
+
 #sect3 {
     background: url(../img/slide3.jpg) 50% 0 no-repeat fixed;
     color: #fff;
@@ -186,12 +178,14 @@ p {
     padding: 170px 0 0 0;
     background-size: cover;
 }
+
 #sect4 {
     background-color: #fff;
     color: #333333;
     height: 300px;
     padding: 200px 0;
 }
+
 #sect5 {
     background: url(../img/slide5.jpg) 50% 0 no-repeat fixed;
     height: 200px;
@@ -200,26 +194,38 @@ p {
     color: #fff;
     background-size: cover;
 }
+
 /* Parallax Styles */
 .center { 
     margin: 0 auto; 
 }
+
 .content { 
     margin: 0 auto; 
     width: 960px; 
 }
+
 .clear { 
     clear: both;
 }
 
-
-/* Media Queries */
-@media (max-width: 768px) {
+/* Media Queries*/
+@media (max-width: 825px) {
     nav ul.navbar-menu {
-      display: none;
+      display: flex;
+      flex-direction: column;
     }
   
-    nav button {
-      display: block;
+    nav {
+        display: inline-block;
+        text-align: center;
+        line-height: 100px;
+        padding: 50px;
+        background-color: black;
+        height: 100vh;
     }
-  }
+    nav li a {
+        border: none;
+        font-size: 20px;
+    }
+  } 
