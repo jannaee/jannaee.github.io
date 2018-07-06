@@ -1,14 +1,16 @@
 // Code for Parallax scrolling effects 
 //attribute: https://1stwebdesigner.com/parallax-scrolling-tutorial/
+'use strict';
+
 $(document).ready(function () {
     $('a[href*=#]').each(function () {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
             && location.hostname == this.hostname
             && this.hash.replace(/#/, '')) {
-            var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) + ']');
-            var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+            let $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) + ']');
+            let $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
             if ($target) {
-                var targetOffset = $target.offset().top;
+                let targetOffset = $target.offset().top;
                 $(this).click(function () {
                     $("#nav li a").removeClass("active");
                     $(this).addClass('active');
@@ -17,5 +19,21 @@ $(document).ready(function () {
                 });
             }
         }
+    });
+});
+
+$(document).ready(function () {
+    let c, currentScrollTop = 0,
+        navbar = $('nav');
+    $(window).scroll(function () {
+        let a = $(window).scrollTop();
+        let b = navbar.height();
+        currentScrollTop = a;
+        if (c < currentScrollTop && a > b + b) {
+            navbar.addClass("scrollUp");
+        } else if (c > currentScrollTop && !(a <= b)) {
+            navbar.removeClass("scrollUp");
+        }
+        c = currentScrollTop;
     });
 });

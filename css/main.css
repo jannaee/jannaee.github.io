@@ -34,26 +34,56 @@ a {
     font-family: 'Poppins', sans-serif;
 }
 /* NAVIGATION STYLES */
-nav a {
+nav li a {
     padding: 7px 7px 7px 7px;
-    border: 1px solid #15909f;
+    border: 1px solid#15909f;
     border-radius: 3px;
     text-decoration: none;
 }
-
+nav li a:active {
+    color: #fff;
+    opacity: 1;
+    border-bottom: 2px solid #fff;
+}
 nav a:hover {
     text-decoration: underline;
+    background-color: #15909f; 
+    color: #fff;
+    font-weight: 400;
+    opacity:1;
 }
 
 nav {
-    text-align: center;
-    padding-bottom: 100px;
+    background: #fff;
+    height: 80px;
+    line-height: 80px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9998;
+    transition: all 0.5s;
 }
-nav > ul li {
-    list-style-type: none;
-    display: inline;
-    text-align: center;
-    margin: 5px 5px 5px 5px;
+nav.scrollUp {
+    transform: translateY(-80px);
+}
+
+nav ul.navbar-menu {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.navbar-menu li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.nav-container {
+    width: 80%;
+    margin: 0 auto;
+    clear: both;
 }
 
 footer {
@@ -67,13 +97,8 @@ footer {
 }
 
 header {
-    text-align: center;
-    padding: 50px;
-    /* parallax style */
-    width: 100%;
-    background: url("../img/ego-onload-v2.png") no-repeat;
-    height: 80px;
-    position: fixed;
+    /* background: url("../img/ego-onload-v2.png") no-repeat; */
+    height: 200px;
     margin-top:30px;
 }
 
