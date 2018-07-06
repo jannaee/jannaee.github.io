@@ -7,7 +7,8 @@ $(document).ready(function () {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
             && location.hostname == this.hostname
             && this.hash.replace(/#/, '')) {
-            let $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) + ']');
+            let $targetId = $(this.hash), 
+                $targetAnchor = $('[name=' + this.hash.slice(1) + ']');
             let $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
             if ($target) {
                 let targetOffset = $target.offset().top;
@@ -24,7 +25,8 @@ $(document).ready(function () {
 
 //https://codemyui.com/hide-header-navigation-on-scroll-down-and-show-on-scroll-up/
 $(document).ready(function () {
-    let c, currentScrollTop = 0,
+    let c, 
+        currentScrollTop = 0,
         navbar = $('nav');
     $(window).scroll(function () {
         let a = $(window).scrollTop();
