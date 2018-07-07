@@ -26,6 +26,8 @@ body {
     line-height: 20px;
     color: #333;
     background-color: #fff;
+    background:url('../img/jannaeeAndMiles-workLife-sm.jpg') 50% 0 no-repeat fixed;
+
 }
 
 h1, h2, h3, h4, h5 {
@@ -133,6 +135,7 @@ header {
     max-width: 70vw;
     height: 80vh;
     padding: 18px 20px;
+
 }
 
 h1 {
@@ -159,7 +162,6 @@ p {
     width: 100%; 
 }
 #sect1 {
-    /* background:url('../img/slide1.jpg') 50% 0 no-repeat fixed; */
     margin-top: 105px;
     height: 600px;
     margin: 0;
