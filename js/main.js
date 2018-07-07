@@ -13,7 +13,7 @@ $(document).ready(function () {
             if ($target) {
                 let targetOffset = $target.offset().top;
                 $(this).click(function () {
-                    $(".navbar-menu a").removeClass("active");
+                    $("#nav a").removeClass("active");
                     $(this).addClass('active');
                     $('html, body').animate({ scrollTop: targetOffset }, 1000);
                     return false;
@@ -41,13 +41,13 @@ $(document).ready(function () {
     });
 });
 
-
-//Hamburger icon for small screens
-function openHamNav(){
-   let x = document.getElementById('myHamNav');
-   if (x.className === "nav-container") {
-       x.className += " responsive";
-   } else {
-       x.className = "nav-container";
-   }
+//Hamburger icon for small screens with an animated feature
+function animatedMenu(menuClick){
+    menuClick.classList.toggle("change");
+    let x = document.getElementById('myHamNav');
+    if (x.className === "nav-container") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav-container";
+    }
 }
