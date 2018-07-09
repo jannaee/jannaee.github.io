@@ -8,7 +8,7 @@ const cachedFiles= [
   '/index.html',
   'css/main.css',
   'js/main.js',
-  'img/jannaeeAndMiles-workLife-sm.jpg'
+  'img/WorkLife-Hero.png'
 ];
 
 // cache of items and installing of sw is successful.
