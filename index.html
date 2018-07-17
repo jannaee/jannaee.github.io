@@ -1,26 +1,88 @@
-<!doctype html>
-<html lang="en" class="no-js no-touch">
-  <head>
-    <meta charset="utf-8" >
-    <meta name="description" content="Portfolio of Jannaee Sick">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
-    <meta itemprop="name" content="Jannaee Sick Web Portfolio">
-    <meta itemprop="description" content="Jannaee Sick Web Portfolio">
-    <link href='https://fonts.googleapis.com/css?family=Magra:400,700|Poly:400italic,400' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://jannaee.github.io/styles/components.css">
-    <title>Jannaeé Sick</title>
-  </head>
-  <body class="page--index home">
-    <div class="container home-featured-section">
-      <img src="https://jannaee.github.io/images/ego-onload.svg"> 
-      <div id="foot" class="container">
-        <h4 class="g-medium-half g-wide--1"><a href="https://jannaee.github.io/developer.html">developer</a></h4>
-        <h4 class="g-medium-half g-wide--1"><a href="https://jannaee.github.io/tinkerer.html">robotics tinkerer</a></h4>
-        <h4 class="g-medium-half g-medium--last g-wide--1 g-wide--last"><a href="https://jannaee.github.io/3dhacker.html">3D hacker</a></h4>
-        <h4 class="g-medium-half g-wide--1"><a href="https://jannaee.github.io/zombie-enthusiast.html">zombie enthusiast</a></h4>
-      </div>  
-    </div>
-    <!--This website was created with Google Web Starter Kit. I selected this framework in 2014 to experiment with scss. My goal is to recreate this website by the end of the year.-->
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jannaee Sick | User Experience Designer & Front End Developer</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500|Spectral:200i,300,400" rel="stylesheet">
+    <!-- <script type="application/javascript" src="/sw.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- Bring in data from Behance ver 1.2 -->
+    <!-- <script type="text/javascript" src="js/behance.js"></script> -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="nav-container" id="myHamNav">
+                    <!-- hamburger navigation -->
+                    <div class="navbar-menu">
+                        <a href="#sect1" title="Next Section" class="active">&nbsp;</a>
+                        <a href="#sect2" title="Next Section">Hello</a>
+                        <a href="#sect3" title="Next Section">History</a>
+                        <a href="#sect4" title="Next Section">Portfolio</a>
+                        <a href="#sect5" title="Next Section">Contact</a>
+                        <a href="javascript:void(0);" class="icon">
+                            <div class="menuIcon" onclick="animatedMenu(this)">
+                                <div class="bar1"></div>
+                                <div class="bar2"></div>
+                                <div class="bar3"></div>
+                            </div>
+                        </a>                       
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section id="sect1"><!--Blank section for hero image to show--></section>
+            <section id="sect2">
+                <h1>Hello.<br/>
+                I'm Jannaee.</h1>
+                <p>I was born in South Korea, raised in northeast Florida, and currently living in Raleigh, North Caroina.</p>
+
+                <p>I am a professional web developer who is in love with finding ways to combine my fondness of design with code. When I am not coding, you can find me with my son and two Great Danes adding steps to my fitbit.</p>
+            
+                <p>I'm not sure what journey lead you to my website, but I am sure glad you stopped by. </p>
+            </section>
+            <section id="sect3">
+                    <h2>My History.</h2>
+                    <p>Professionally speaking, I've dabbled in a thing or two. I have worked as an Illustrator, Graphic Designer, User Experience Designer and Front End Developer.</p>
+
+                    <p>In mid 2014, I started <a href="https://www.behance.net/gallery/67810477/Tinsy-Co-A-jewelry-line-for-pet-lovers" target="_blank">Tinsy Co.</a> my own jewelry company specializing in 3D printed miniatures of pets as charms. After about a year and a half research and experimentation with the jewelry line I felt the call of web development was too strong.</p>
+                    
+                    <p>In late 2017, I dove back into web development and earned a <a href="https://developers.googleblog.com/2018/04/congratulations-to-grow-with-google-developer-scholars.html" target="_blank">Google Developer Scholarship</a>. In the next 10 months I spent 100 hours of coding to catch back up to current front end technology. I was shocked to see that ES6 had been released since I was away! </p>
+                    
+                    <p>Nonetheless, I perservered and secured a coveted spot in the Udacity Nanodegree program. I plan to graduate in October 2018 with a certification as a Mobile Web Developer.</p>
+            </section> <!--Section 3 ends here-->
+            <section id="sect4">
+                    <h2>Hire Me.</h2>
+                    <p>I am available for exciting employment opportunities! If you're interested in having some work done download my <a href="docs/JSick-Resume-07112018.pdf" target="_blank">resume</a>, check out <a href="https://www.behance.net/Jannaee" target="_blank">my portfolio</a> and get in touch with me.</p>
+
+            </section>
+
+            <section id="sect5">
+                    <h2>Contact Me.</h2>
+                    <p>If you are interested in learning more about me or just looking to share your own constructive thoughts, <a href="https://goo.gl/forms/0FgH6kABB0smJRN62">send me a message</a>. I love getting mail from real people.</p>
+                    
+                    <p>
+                        <a href="https://www.behance.net/Jannaee" target="_blank"><i class="fab fa-behance"></i></a>
+                        <a href="https://www.linkedin.com/in/jannaee/" target="_blank"><i class="fab fa-linkedin"></i></a> 
+                        <a href="https://github.com/jannaee" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.facebook.com/jannaee" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    </p>     
+            </section>
+
+            <section id="sect6"><!--Blank section for hero image to show--></section>  
+        </main>
+    </div><!--Container ends-->
+
+    <footer>
+       <p>&copy; 2018 Website handcoded with ❤ by Jannaee Sick</p>
+    </footer>
+
+</body>
 </html>
