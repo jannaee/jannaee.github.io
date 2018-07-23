@@ -4,7 +4,5 @@ Previewing from a python server, be sure to have at least 3.6.5 installed from t
 
 
 Test for python with python -V
-
-http://localhost:49964/
-
+Run python -m http.server 8080 to preview work on http://localhost:8080/
 
