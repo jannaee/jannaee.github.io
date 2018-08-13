@@ -46,6 +46,7 @@ footer h4, p{
 footer p {
     color:#ffffff;
     font-size: 1em;
+    text-align: center;
 }
 a {
     margin-top: 0px;
@@ -144,6 +145,7 @@ header {
 h1 {
     font-size: 60px;
     line-height: 60px;
+    text-align: center;
 }
 
 h2 {
@@ -163,7 +165,7 @@ p {
 
 /* Section styles */
 #sect3, #sect4, #sect5 {
-    padding: 100px 60px 60px 60px;
+    padding: 100px 20% 60px 20%;
     background-color: #fff;
     
 }
@@ -175,7 +177,7 @@ p {
     height: 600px;
 }
 #sect2 {
-    padding: 0px 60px 0 60px;
+    padding: 100px 20% 60px 20%;
     background-color: #fff;
     height: auto;
     margin: 0 auto;
@@ -189,6 +191,7 @@ p {
 
 #sect5 {
     height: auto;
+    padding-bottom: 100px;
 }
 
 
@@ -309,10 +312,12 @@ p {
     }  
 }
 
-@media (max-width: 400px) {
+@media (max-width: 645px) {
+    .container {
+        max-width: 100%;
+    }
     body {
         padding: 0;
-        margin: 0'
     }
     header {
         text-align: left;
@@ -321,7 +326,6 @@ p {
     .intro {
         max-width: 100%;
     }
-
     .wrapper{
         margin: 0;
     }
@@ -329,3 +333,27 @@ p {
         padding: 0;
     }
 }
+
+@media (max-width:400px){
+   h1 {
+       font-size: 1.25em;
+   }
+   p {
+       line-height: 1.65em;
+   }
+   .container {
+       margin:0;
+       padding:0;
+       width: 100vw;
+   }
+
+
+}
+
+
+
+
+
+
+
+

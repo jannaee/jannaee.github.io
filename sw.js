@@ -2,7 +2,9 @@
   Adding a service worker.
 */ 
 
-const cacheName = 'v1';
+
+//How to automatically change cache version?
+const cacheName = 'v3';
 const cachedFiles= [
   '/',
   '/index.html',
