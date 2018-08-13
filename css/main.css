@@ -52,13 +52,18 @@ a {
     margin-top: 0px;
     margin-bottom: 20px;
     color: #15909f;
-    font-size: 20px;
+    font-size: 1em;
     font-family: 'Poppins', sans-serif;
 }
 
+body
+
 /* NAVIGATION STYLES */
+.navbar-menu a {
+    font-size: 1.5em;
+}
 nav a {
-    padding: 7px 7px 7px 7px;
+    padding: 7px;
     text-decoration: none;
     color: #fff;
 }
@@ -131,7 +136,7 @@ footer {
 
 header {
     min-height: 15vh;
-    margin: 0 0 135px 0;
+    margin: 0 0 0 0;
     text-align: center;
 
 }
@@ -143,16 +148,18 @@ header {
 }
 
 h1 {
-    font-size: 60px;
-    line-height: 60px;
+    font-size: 4em;
+    line-height: 1.2em;
     text-align: center;
 }
 
 h2 {
-    margin-top: 0px;
+    margin-top: 35px;
     margin-bottom: 20px;
     color:  #011227;
-    font-size: 2em;
+    font-size: 1.85em;
+    line-height: 1.5em;
+    text-align: center;
 }
 
 p {
@@ -169,15 +176,45 @@ p {
     background-color: #fff;
     
 }
-
-#sect1 {/* Sections for blank space */
-    height: 200px;
+ /* Sections for blank space */
+#sect1 {
+    height: 50vh;
 }
+
+#sect1 h1 {
+    font-size:4em;
+    color: #ffffff;
+    padding-top: 10%;
+}
+
+.social-contacts > a:hover {
+    color:#011227;
+    padding: 0;
+    margin: 0;
+}
+
+.social-contacts > a {
+
+    text-decoration: none;
+}
+#sect2 .social-contacts > a {
+    padding: 0 10px;
+    font-size: 1.25em;
+}
+
+#sect5 .social-contacts > a {
+    padding: 10px 10px;
+    font-size: 2em;
+}
+
+/* hr {
+    width: 100vw;
+} */
 #sect6 {/* Sections for blank space */
     height: 600px;
 }
 #sect2 {
-    padding: 100px 20% 60px 20%;
+    padding: 50px 20% 60px 20%;
     background-color: #fff;
     height: auto;
     margin: 0 auto;
@@ -209,6 +246,13 @@ p {
     clear: both;
 }
 
+.social-contacts {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+
 
 
 /* Media Queries*/
@@ -221,7 +265,7 @@ p {
     h1 {
         font-size: 2rem;
         line-height: 1.5em;
-        text-align: left;
+        text-align: center;
         color: #011227;
         
     }
@@ -282,6 +326,10 @@ p {
       display: block;
       text-align: center;
     }
+
+
+
+
 
     /* Animated Menu Icon */
     /* w3schools.com */
