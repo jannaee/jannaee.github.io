@@ -171,8 +171,8 @@ p {
 }
 
 /* Section styles */
-#sect3, #sect4, #sect5 {
-    padding: 100px 20% 60px 20%;
+#sect2, #sect3, #sect4, #sect5 {
+    padding: 50px 20%;
     background-color: #fff;
     
 }
@@ -194,9 +194,9 @@ p {
 }
 
 .social-contacts > a {
-
     text-decoration: none;
 }
+
 #sect2 .social-contacts > a {
     padding: 0 10px;
     font-size: 1.25em;
@@ -207,14 +207,13 @@ p {
     font-size: 2em;
 }
 
-/* hr {
-    width: 100vw;
-} */
+
 #sect6 {/* Sections for blank space */
     height: 600px;
 }
+
 #sect2 {
-    padding: 50px 20% 60px 20%;
+    padding: 50px 20%;
     background-color: #fff;
     height: auto;
     margin: 0 auto;
@@ -222,13 +221,12 @@ p {
 }
 
 #sect4 {
-    background-color: #fff;
-    height: auto;
+    background-color: #F5F5F5;
 }
 
 #sect5 {
+    background-color: #ffffff;
     height: auto;
-    padding-bottom: 100px;
 }
 
 
@@ -252,10 +250,42 @@ p {
 }
 
 
+/* Grid Gallery */
+
+.gallery {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 5px
+}
+
+.gallery:hover {
+    border: 1px solid #44ABE4;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px 5px 0 0;
+}
+
+.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.rwd-grid {
+    padding: 0 6px;
+    float: left;
+    width: 49.99999%;
+}
 
 
-
-/* Media Queries*/
+/*************************************************** Media Queries*/
 @media (max-width: 825px) {
     /* body styles */
     
@@ -327,10 +357,6 @@ p {
       text-align: center;
     }
 
-
-
-
-
     /* Animated Menu Icon */
     /* w3schools.com */
     .menuIcon{
@@ -339,10 +365,10 @@ p {
     }
 
     .bar1, .bar2, .bar3 {
-        width: 35px;
-        height: 5px;
-        background-color: #011227;
-        margin: 6px 0;
+        width: 20px;
+        height: 3px;
+        background-color: #ffffff;
+        margin: 4px 0;
         transition: 0.4s;
     }
     .change .bar1 {
@@ -355,15 +381,21 @@ p {
     }
     
     .change .bar3 {
-        -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-        transform: rotate(45deg) translate(-8px, -8px) ;
+        -webkit-transform: rotate(49deg) translate(-4px, 0px) ;
+        transform: rotate(49deg) translate(-4px, 0px) ;
     }  
+
+    .rwd-grid {
+        width:100%;
+        margin: 6px 0;
+    }    
 }
 
 @media (max-width: 645px) {
     .container {
         max-width: 100%;
     }
+
     body {
         padding: 0;
     }
@@ -380,11 +412,19 @@ p {
     .flex-item {
         padding: 0;
     }
+    .rwd-grid {
+        width: 100%;
+    }
 }
 
 @media (max-width:400px){
+    html{
+        background-color: #ffffff;
+    }
+
    h1 {
        font-size: 1.25em;
+       line-height: 1em;
    }
    p {
        line-height: 1.65em;
@@ -395,7 +435,15 @@ p {
        width: 100vw;
    }
 
+   #sect1, #sect2 ,#sect3, #sect4, #sect5 {
+       padding: 10px 15% 60px 5%;
+       background-color:none;
+    }
 
+
+   .rwd-grid {
+    width: 90vw;
+}
 }
 
 
