@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="calc.css">
+    <title>Calculator</title>
+    <script>
+
+
+            function Calculation(num, num2) {
+                //define properties of object
+                this.num = num;
+                this.num2 = num2;
+                // this.currentNum = 0; 
+            }
+        
+            //create actions
+            Calculation.prototype.compute = function () {
+                console.log(this.num +this.num2);
+
+        
+            }
+            //Creating method to display the calculator input onto screen
+            Calculation.prototype.displayCalculator = function () {
+                var content = body.innerHTML;
+                
+
+            }
+            //creating an instance of this Calculation object
+            var calculation = new Calculation(55, 22);
+            calculation.compute();
+
+        </script>
+</head>
+    <body>
+        <div class = "calcBody">
+            <div>Input</div>
+        </div>
+    </body>
+</html>
