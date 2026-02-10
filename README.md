@@ -82,10 +82,8 @@ jannaee.github.io/
 ├── hero-illustration.png         # Custom work-life illustration
 ├── README.md                     # This file
 ├── LICENSE                       # MIT License
-└── assets/                       # Additional assets (if any)
-    ├── images/
-    ├── fonts/
-    └── documents/
+└── assets/                       # Images and vector assets
+    └── *.svg                     # SVG illustrations and icons
 ```
 
 ---
