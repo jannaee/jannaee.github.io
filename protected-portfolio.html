@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protected Content - Jannaee Sick</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy-deep: #1a3a52;
+            --navy-medium: #2d5a7b;
+            --cyan: #6DD5ED;
+            --yellow: #FFD93D;
+            --white: #ffffff;
+            --gray-50: #fafbfc;
+            --gray-200: #dce3ea;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy-medium) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        /* Login Container */
+        .login-container {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .login-container h1 {
+            color: var(--navy-deep);
+            margin-bottom: 0.5rem;
+            font-size: 2rem;
+        }
+
+        .login-container p {
+            color: var(--navy-medium);
+            margin-bottom: 2rem;
+        }
+
+        .lock-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            color: var(--cyan);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--navy-deep);
+            font-weight: 600;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid var(--gray-200);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--cyan);
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--yellow), #FFC93C);
+            color: var(--navy-deep);
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 1rem;
+        }
+
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 217, 61, 0.4);
+        }
+
+        .btn-login:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .error-message {
+            background: #fee;
+            color: #c33;
+            padding: 0.75rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        .back-link {
+            margin-top: 1.5rem;
+            display: inline-block;
+            color: var(--cyan);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Protected Content (Hidden by default) */
+        .protected-content {
+            display: none;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .protected-content.show {
+            display: block;
+        }
+
+        .protected-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--gray-200);
+        }
+
+        .protected-header h1 {
+            color: var(--navy-deep);
+            font-size: 2rem;
+        }
+
+        .btn-logout {
+            padding: 0.75rem 1.5rem;
+            background: var(--navy-deep);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-logout:hover {
+            background: var(--navy-medium);
+        }
+
+        .content-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .content-section h2 {
+            color: var(--navy-deep);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .content-section p {
+            color: var(--navy-medium);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .download-card {
+            background: var(--gray-50);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--gray-200);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            transition: all 0.3s;
+        }
+
+        .download-card:hover {
+            border-color: var(--cyan);
+            transform: translateY(-2px);
+        }
+
+        .download-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .file-icon {
+            font-size: 2.5rem;
+        }
+
+        .file-details h3 {
+            color: var(--navy-deep);
+            font-size: 1.125rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .file-details p {
+            color: var(--navy-medium);
+            font-size: 0.875rem;
+            margin: 0;
+        }
+
+        .btn-download {
+            padding: 0.75rem 1.5rem;
+            background: var(--cyan);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-download:hover {
+            background: var(--navy-deep);
+            transform: scale(1.05);
+        }
+
+        .project-card {
+            background: var(--gray-50);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--gray-200);
+            margin-bottom: 1.5rem;
+        }
+
+        .project-card h3 {
+            color: var(--navy-deep);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--yellow);
+            color: var(--navy-deep);
+            border-radius: 12px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .user-info {
+            background: var(--gray-50);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .user-info p {
+            margin: 0;
+            color: var(--navy-medium);
+        }
+
+        .user-info strong {
+            color: var(--navy-deep);
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Form (Shown by default) -->
+    <div class="login-container" id="loginContainer">
+        <div class="lock-icon">🔒</div>
+        <h1>Protected Content</h1>
+        <p>This area contains my resume and private projects. Please log in to view.</p>
+        
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="your@email.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password" required>
+            </div>
+            
+            <button type="submit" class="btn-login" id="loginBtn">
+                🔓 Access Protected Content
+            </button>
+        </form>
+        
+        <div class="error-message" id="errorMessage"></div>
+        
+        <a href="portfolio-complete.html" class="back-link">← Back to Public Portfolio</a>
+        
+        <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--gray-200);">
+            <p style="font-size: 0.875rem; color: var(--navy-medium);">
+                <strong>For Recruiters:</strong> Request access by emailing me through LinkedIn.
+            </p>
+        </div>
+    </div>
+
+    <!-- Protected Content (Hidden by default) -->
+    <div class="protected-content" id="protectedContent">
+        <div class="protected-header">
+            <h1>🔓 Protected Area</h1>
+            <button class="btn-logout" id="logoutBtn">Logout</button>
+        </div>
+
+        <div class="user-info">
+            <p>Logged in as: <strong id="userEmail"></strong></p>
+        </div>
+
+        <!-- Resume Download Section -->
+        <div class="content-section">
+            <h2>📄 Resume & Documents</h2>
+            <p>Download my full resume with contact information and detailed work history.</p>
+            
+            <div class="download-card">
+                <div class="download-info">
+                    <div class="file-icon">📄</div>
+                    <div class="file-details">
+                        <h3>Jannaee_Sick_Resume_2026.pdf</h3>
+                        <p>Full resume with contact details • Updated Feb 2026</p>
+                    </div>
+                </div>
+                <a href="#" class="btn-download" id="resumeDownload">Download PDF</a>
+            </div>
+        </div>
+
+        <!-- Private Projects Section -->
+        <div class="content-section">
+            <h2>🚀 Current Private Projects</h2>
+            <p>Projects I'm currently working on that are not public yet.</p>
+            
+            <div class="project-card">
+                <span class="project-tag">Side Project</span>
+                <h3>Design System SaaS Platform</h3>
+                <p>Building a SaaS tool for teams to create and manage design systems collaboratively. Currently in beta with 3 pilot customers. Tech stack: React, Node.js, PostgreSQL, Figma API integration.</p>
+                <p><strong>Status:</strong> Pre-launch (Q2 2026 target)</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-tag">Freelance</span>
+                <h3>Healthcare Startup MVP</h3>
+                <p>Designing and developing the MVP for a telehealth platform focused on mental health services. Working with a small founding team under NDA.</p>
+                <p><strong>Status:</strong> In development</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-tag">Research</span>
+                <h3>AI-Powered Design Tools Research</h3>
+                <p>Exploring how AI can assist in creating accessible design components. Building prototypes using Claude API and evaluating effectiveness.</p>
+                <p><strong>Status:</strong> Early research phase</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 2px solid var(--gray-200);">
+            <a href="portfolio-complete.html" class="back-link">← Back to Public Portfolio</a>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script type="module">
+        // Import Firebase
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js';
+        import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js';
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCssvq28aSUkQ41uvl5h_ee81G6dbIJRNU",
+            authDomain: "jannaee-portfolio.firebaseapp.com",
+            projectId: "jannaee-portfolio",
+            storageBucket: "jannaee-portfolio.firebasestorage.app",
+            messagingSenderId: "869951702926",
+            appId: "1:869951702926:web:c5ef226f061968267a46df"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        // DOM elements
+        const loginContainer = document.getElementById('loginContainer');
+        const protectedContent = document.getElementById('protectedContent');
+        const loginForm = document.getElementById('loginForm');
+        const loginBtn = document.getElementById('loginBtn');
+        const logoutBtn = document.getElementById('logoutBtn');
+        const errorMessage = document.getElementById('errorMessage');
+        const userEmail = document.getElementById('userEmail');
+        const resumeDownload = document.getElementById('resumeDownload');
+
+        // Check authentication state
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                // User is signed in
+                showProtectedContent(user);
+            } else {
+                // User is signed out
+                showLoginForm();
+            }
+        });
+
+        // Handle login
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            loginBtn.disabled = true;
+            loginBtn.textContent = 'Logging in...';
+            errorMessage.classList.remove('show');
+            
+            try {
+                await signInWithEmailAndPassword(auth, email, password);
+                // Success - onAuthStateChanged will handle the UI update
+            } catch (error) {
+                console.error('Login error:', error);
+                let message = 'Login failed. Please check your credentials.';
+                
+                if (error.code === 'auth/invalid-credential') {
+                    message = 'Invalid email or password.';
+                } else if (error.code === 'auth/too-many-requests') {
+                    message = 'Too many attempts. Please try again later.';
+                }
+                
+                errorMessage.textContent = message;
+                errorMessage.classList.add('show');
+                loginBtn.disabled = false;
+                loginBtn.textContent = '🔓 Access Protected Content';
+            }
+        });
+
+        // Handle logout
+        logoutBtn.addEventListener('click', async () => {
+            try {
+                await signOut(auth);
+                // onAuthStateChanged will handle the UI update
+            } catch (error) {
+                console.error('Logout error:', error);
+            }
+        });
+
+        // Handle resume download (example - you'll need to implement actual file storage)
+        resumeDownload.addEventListener('click', (e) => {
+            e.preventDefault();
+            // Option 1: Link to Firebase Storage file
+            // window.open('https://firebasestorage.googleapis.com/...', '_blank');
+            
+            // Option 2: Link to Google Drive file (requires authentication)
+            // window.open('https://drive.google.com/file/d/YOUR_FILE_ID/view', '_blank');
+            
+            // For now, show alert
+            alert('Resume download would trigger here. Set up Firebase Storage or link to secure file.');
+        });
+
+        // Show protected content
+        function showProtectedContent(user) {
+            loginContainer.style.display = 'none';
+            protectedContent.classList.add('show');
+            userEmail.textContent = user.email;
+        }
+
+        // Show login form
+        function showLoginForm() {
+            loginContainer.style.display = 'block';
+            protectedContent.classList.remove('show');
+            loginForm.reset();
+            loginBtn.disabled = false;
+            loginBtn.textContent = '🔓 Access Protected Content';
+        }
+    </script>
+</body>
+</html>
