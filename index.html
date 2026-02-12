@@ -4,14 +4,1099 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jannaee Sick - UX/UI Designer & Front-End Engineer</title>
-    <link rel="stylesheet" href="index-styles.css">
+    <meta name="description" content="UX/UI Designer & Front-End Engineer with 7+ years creating user-centered digital experiences.">
+    
+    <style>
+        /* ============================================
+           COMPLETE PORTFOLIO STYLES
+           Ready to Copy & Paste!
+           ============================================ */
+        
+        /* Base Reset & Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            /* Night Theme - Deep Black Backgrounds */
+            --black-deep: #0a0a0a;
+            --black-medium: #111111;
+            --black-light: #1a1a1a;
+            --navy-hint: #0f1419;
+            --navy-subtle: #161d26;
+            
+            /* Vibrant Accents (stand out against black) */
+            --cyan: #6DD5ED;
+            --yellow: #FFD93D;
+            --white: #ffffff;
+            --purple-deep: #7C3AED;
+            --purple-medium: #9333EA;
+            --orange-bright: #F97316;
+            --orange-deep: #EA580C;
+            --blue-electric: #3B82F6;
+            
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, var(--purple-deep) 0%, var(--blue-electric) 50%, var(--cyan) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--orange-bright) 0%, var(--yellow) 100%);
+            --gradient-text: linear-gradient(135deg, var(--cyan) 0%, var(--purple-medium) 50%, var(--orange-bright) 100%);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: var(--black-deep);
+            color: var(--white);
+            line-height: 1.6;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            background: var(--gradient-text);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--cyan);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* ============================================
+           ENHANCED HERO SECTION
+           ============================================ */
+        
+        .hero-enhanced {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 6rem 2rem 4rem;
+            overflow: hidden;
+            background: linear-gradient(180deg, var(--black-deep) 0%, var(--navy-hint) 50%, var(--black-medium) 100%);
+        }
+        
+        /* Animated Blobs */
+        .blob-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.2;
+            animation: float 20s infinite ease-in-out;
+        }
+        
+        .blob-1 {
+            width: 500px;
+            height: 500px;
+            background: var(--gradient-primary);
+            top: -10%;
+            right: -5%;
+            animation-delay: 0s;
+        }
+        
+        .blob-2 {
+            width: 400px;
+            height: 400px;
+            background: var(--gradient-accent);
+            bottom: -10%;
+            left: -5%;
+            animation-delay: -7s;
+        }
+        
+        .blob-3 {
+            width: 350px;
+            height: 350px;
+            background: linear-gradient(135deg, var(--cyan) 0%, var(--purple-deep) 100%);
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: -14s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(30px, -30px) scale(1.05); }
+            50% { transform: translate(-20px, 20px) scale(0.95); }
+            75% { transform: translate(20px, 30px) scale(1.02); }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .hero-text {
+            max-width: 600px;
+        }
+        
+        .hero-greeting {
+            font-size: 1.5rem;
+            color: var(--cyan);
+            margin-bottom: 1rem;
+            font-weight: 500;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .hero-name {
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        
+        .gradient-text {
+            background: var(--gradient-text);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% 200%;
+            animation: gradientShift 8s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .hero-title {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            color: var(--white);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+        
+        .hero-description {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2.5rem;
+            max-width: 550px;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* CTA Buttons */
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.8s both;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+            font-weight: 700;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn svg {
+            transition: transform 0.3s ease;
+        }
+        
+        .btn:hover svg {
+            transform: translateX(4px);
+        }
+        
+        .btn-primary {
+            background: var(--gradient-accent);
+            color: var(--navy-deep);
+            box-shadow: 0 10px 30px rgba(249, 199, 79, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(249, 199, 79, 0.5);
+        }
+        
+        .glow-effect {
+            position: relative;
+        }
+        
+        .glow-effect::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: var(--gradient-accent);
+            border-radius: 50px;
+            z-index: -1;
+            filter: blur(15px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .glow-effect:hover::before {
+            opacity: 0.7;
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(10px);
+            color: var(--white);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.18);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+        }
+        
+        /* Floating Illustration */
+        .hero-visual {
+            position: relative;
+            animation: fadeIn 1s ease-out 1s both;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .illustration-wrapper {
+            position: relative;
+            animation: floatSlow 6s ease-in-out infinite;
+        }
+        
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .hero-illustration {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+        }
+        
+        .decoration {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            opacity: 0.15;
+            filter: blur(30px);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        .decoration-1 {
+            width: 200px;
+            height: 200px;
+            top: -50px;
+            right: -50px;
+        }
+        
+        .decoration-2 {
+            width: 150px;
+            height: 150px;
+            bottom: -30px;
+            left: -30px;
+            background: var(--gradient-accent);
+            animation-delay: -2s;
+        }
+        
+        .decoration-3 {
+            width: 100px;
+            height: 100px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: -1s;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.15;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.25;
+            }
+        }
+        
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
+            animation: bounce 2s ease-in-out infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+        
+        /* ============================================
+           SECTION HEADERS
+           ============================================ */
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: var(--gradient-text);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* ============================================
+           SKILLS SECTION
+           ============================================ */
+        
+        .skills-overview {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, var(--black-medium) 0%, var(--navy-subtle) 100%);
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .skill-card {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.10);
+            box-shadow: 0 10px 30px rgba(109, 213, 237, 0.25);
+        }
+        
+        .skill-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .skill-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--cyan);
+        }
+        
+        .skill-card ul {
+            list-style: none;
+        }
+        
+        .skill-card li {
+            padding: 0.5rem 0;
+            color: rgba(255, 255, 255, 0.8);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .skill-card li:last-child {
+            border-bottom: none;
+        }
+        
+        /* ============================================
+           FEATURED WORK (GLASS CARDS)
+           ============================================ */
+        
+        .featured-work {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, var(--navy-subtle) 0%, var(--black-deep) 50%, var(--black-light) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .featured-work::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 30%, rgba(124, 58, 237, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 70%, rgba(249, 115, 22, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .project-card-glass {
+            position: relative;
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            padding: 2rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+        }
+        
+        .project-card-glass::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 24px;
+            padding: 2px;
+            background: var(--gradient-primary);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .project-card-glass:hover::before {
+            opacity: 1;
+        }
+        
+        .project-card-glass:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.10);
+            box-shadow: 0 20px 60px rgba(124, 58, 237, 0.4),
+                        0 0 40px rgba(109, 213, 237, 0.25);
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 250px;
+            margin-bottom: 1.5rem;
+            border-radius: 16px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .project-card-glass:hover .project-image img {
+            transform: scale(1.05);
+        }
+        
+        .project-category {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(249, 199, 79, 0.2);
+            border: 1px solid rgba(249, 199, 79, 0.3);
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--yellow);
+            margin-bottom: 1rem;
+        }
+        
+        .project-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+        
+        .project-description {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .metric {
+            text-align: center;
+        }
+        
+        .metric-value {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 900;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.25rem;
+        }
+        
+        .metric-label {
+            display: block;
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .tag {
+            padding: 0.375rem 0.875rem;
+            background: rgba(109, 213, 237, 0.15);
+            border: 1px solid rgba(109, 213, 237, 0.3);
+            border-radius: 50px;
+            font-size: 0.8125rem;
+            color: var(--cyan);
+            font-weight: 500;
+        }
+        
+        /* ============================================
+           EXPERIMENTS SECTION
+           ============================================ */
+        
+        .experiments-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, var(--black-light) 0%, var(--black-deep) 100%);
+        }
+        
+        .experiments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        
+        .experiment-card {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .experiment-card:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.10);
+            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.25);
+        }
+        
+        .experiment-image {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 1.5rem;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .experiment-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .experiment-category {
+            display: inline-block;
+            padding: 0.375rem 0.875rem;
+            background: rgba(249, 199, 79, 0.2);
+            border: 1px solid rgba(249, 199, 79, 0.3);
+            border-radius: 50px;
+            font-size: 0.875rem;
+            color: var(--yellow);
+            margin-bottom: 1rem;
+        }
+        
+        .experiment-card h4 {
+            font-size: 1.25rem;
+            color: var(--white);
+            margin-bottom: 0.75rem;
+        }
+        
+        .experiment-card p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1rem;
+        }
+        
+        .experiment-link {
+            color: var(--cyan);
+            font-weight: 600;
+        }
+        
+        /* ============================================
+           PROCESS SECTION
+           ============================================ */
+        
+        .process-section {
+            padding: 6rem 2rem;
+            background: var(--black-deep);
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            background: var(--gradient-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--navy-deep);
+        }
+        
+        .process-step h4 {
+            font-size: 1.25rem;
+            color: var(--cyan);
+            margin-bottom: 0.75rem;
+        }
+        
+        .process-step p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* ============================================
+           TESTIMONIALS
+           ============================================ */
+        
+        .testimonials-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, var(--black-deep) 0%, var(--black-medium) 100%);
+        }
+        
+        .testimonial-card-glass {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            padding: 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .testimonial-card-glass::before {
+            content: '"';
+            position: absolute;
+            top: 1rem;
+            left: 2rem;
+            font-size: 6rem;
+            font-family: Georgia, serif;
+            color: rgba(109, 213, 237, 0.2);
+            line-height: 1;
+        }
+        
+        .testimonial-text {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+        
+        .author-name {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.25rem;
+        }
+        
+        .author-title {
+            font-size: 0.9375rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* ============================================
+           CERTIFICATIONS
+           ============================================ */
+        
+        .certifications-section {
+            padding: 6rem 2rem;
+            background: var(--black-deep);
+        }
+        
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .certification-card-glass {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .certification-card-glass:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.10);
+            border-color: rgba(249, 199, 79, 0.4);
+            box-shadow: 0 10px 30px rgba(249, 199, 79, 0.25);
+        }
+        
+        .cert-badge {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.12);
+        }
+        
+        .cert-badge img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .cert-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+        
+        .cert-org {
+            font-size: 0.9375rem;
+            color: var(--cyan);
+            margin-bottom: 0.5rem;
+        }
+        
+        .cert-year {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* ============================================
+           ABOUT SECTION
+           ============================================ */
+        
+        .about-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, var(--black-deep) 0%, var(--black-medium) 100%);
+        }
+        
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .about-content p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .about-skill {
+            padding: 0.75rem 1.5rem;
+            background: rgba(109, 213, 237, 0.15);
+            border: 1px solid rgba(109, 213, 237, 0.3);
+            border-radius: 50px;
+            color: var(--cyan);
+            font-weight: 600;
+        }
+        
+        /* ============================================
+           CONTACT SECTION
+           ============================================ */
+        
+        .contact-section {
+            padding: 6rem 2rem;
+            background: var(--black-deep);
+            text-align: center;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+        
+        .contact-link {
+            padding: 1.5rem 2rem;
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            text-decoration: none;
+            color: var(--white);
+            font-size: 1.125rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            min-width: 200px;
+        }
+        
+        .contact-link:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.10);
+            box-shadow: 0 10px 30px rgba(109, 213, 237, 0.35);
+        }
+        
+        .contact-link span {
+            font-size: 2rem;
+        }
+        
+        /* ============================================
+           FOOTER
+           ============================================ */
+        
+        footer {
+            padding: 2rem;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.3);
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* ============================================
+           RESPONSIVE DESIGN
+           ============================================ */
+        
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+            
+            .hero-text {
+                max-width: 100%;
+            }
+            
+            .hero-description {
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .hero-cta {
+                justify-content: center;
+            }
+            
+            .hero-visual {
+                order: -1;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .hero-enhanced {
+                padding: 4rem 1.5rem 3rem;
+            }
+            
+            .skills-grid,
+            .experiments-grid,
+            .process-steps,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-links {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .project-image {
+                height: 200px;
+            }
+            
+            .project-metrics {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-cta {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="container">
+        <div class="nav-container">
             <a href="#" class="logo">Jannaee Sick</a>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#work">Work</a></li>
                 <li><a href="#process">Process</a></li>
                 <li><a href="#about">About</a></li>
@@ -20,35 +1105,69 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- ENHANCED HERO SECTION -->
+    <section class="hero-enhanced">
+        <div class="blob-container">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+        
         <div class="hero-content">
             <div class="hero-text">
-                <p class="intro">👋 Hi, I'm Jannaee</p>
-                <h1>UX/UI Designer & Front-End Engineer</h1>
-                <p class="tagline">
-                    I create user-centered digital experiences with a unique blend of design expertise and technical implementation. Passionate about accessibility, design systems, and crafting interfaces that feel effortless.
+                <p class="hero-greeting">👋 Hi, I'm</p>
+                <h1 class="hero-name">
+                    <span class="gradient-text">Jannaee Sick</span>
+                </h1>
+                <h2 class="hero-title">UX/UI Designer & Front-End Engineer</h2>
+                <p class="hero-description">
+                    I create user-centered digital experiences with a unique blend of design expertise 
+                    and technical implementation. Passionate about accessibility, design systems, and 
+                    crafting interfaces that feel effortless.
                 </p>
-                <div class="cta-buttons">
-                    <a href="#work" class="btn btn-primary"><span>View My Work</span></a>
-                    <a href="#contact" class="btn btn-secondary"><span>Get In Touch</span></a>
+                
+                <div class="hero-cta">
+                    <a href="#work" class="btn btn-primary glow-effect">
+                        <span>View My Work</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Get In Touch</span>
+                    </a>
                 </div>
             </div>
-            <div class="hero-image-container">
-                <img src="assets/mobileUIUX.gif" alt="Front end dev and ui ux designer - illustration by https://storyset.com/" class="hero-image">
+            
+            <div class="hero-visual">
+                <div class="illustration-wrapper">
+                    <img src="assets/mobileUIUX.gif" alt="Front end dev and ui ux designer" class="hero-illustration">
+                    <div class="decoration decoration-1"></div>
+                    <div class="decoration decoration-2"></div>
+                    <div class="decoration decoration-3"></div>
+                </div>
             </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
+    <!-- What I Do Section -->
+    <section class="skills-overview">
         <div class="container">
-            <div class="section-header reveal">
-                <h2>What I Do</h2>
-                <p>Bridging design and development to create cohesive, accessible experiences</p>
+            <div class="section-header">
+                <h2 class="section-title">What I Do</h2>
+                <p class="section-subtitle">Bridging design and development to create cohesive, accessible experiences</p>
             </div>
+            
             <div class="skills-grid">
-                <div class="skill-card reveal">
+                <div class="skill-card">
+                    <div class="skill-icon">🔍</div>
                     <h3>UX Research & Strategy</h3>
                     <ul>
                         <li>User research & testing</li>
@@ -58,7 +1177,9 @@
                         <li>Competitive analysis</li>
                     </ul>
                 </div>
-                <div class="skill-card reveal">
+                
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
                     <h3>Design & Prototyping</h3>
                     <ul>
                         <li>Wireframing & prototyping</li>
@@ -68,7 +1189,9 @@
                         <li>Brand consistency</li>
                     </ul>
                 </div>
-                <div class="skill-card reveal">
+                
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
                     <h3>Front-End Development</h3>
                     <ul>
                         <li>React, Angular, TypeScript</li>
@@ -78,7 +1201,9 @@
                         <li>Performance optimization</li>
                     </ul>
                 </div>
-                <div class="skill-card reveal">
+                
+                <div class="skill-card">
+                    <div class="skill-icon">♿</div>
                     <h3>Accessibility & Standards</h3>
                     <ul>
                         <li>WCAG 2.1 AA compliance</li>
@@ -92,208 +1217,213 @@
         </div>
     </section>
 
-    <!-- Featured Projects -->
-    <section id="work" class="projects-section">
+    <!-- Featured Work Section -->
+    <section class="featured-work" id="work">
         <div class="container">
-            <div class="section-header reveal">
-                <h2>Featured Work</h2>
-                <p>Case studies showcasing design solutions with measurable impact</p>
+            <div class="section-header">
+                <h2 class="section-title">Featured Work</h2>
+                <p class="section-subtitle">Case studies showcasing design solutions with measurable impact</p>
             </div>
             
-            <div class="project-showcase">
-                <!-- Project 1 - Banking -->
-                <div class="project reveal">
-                    <div class="project-visual" style="background: var(--gray-50); padding: 2rem;">
-                        <img src="https://stories.freepiklabs.com/storage/15760/Mobile-login_Mesa-de-trabajo-1.svg" alt="Mobile Banking" style="width: 100%; height: 100%; object-fit: contain;">
+            <div class="projects-grid">
+                <div class="project-card-glass">
+                    <div class="project-image">
+                        <img src="https://stories.freepiklabs.com/storage/15760/Mobile-login_Mesa-de-trabajo-1.svg" alt="Mobile Banking">
                     </div>
-                    <div class="project-info">
-                        <span class="project-tag">Financial Services</span>
-                        <h3>Responsive Banking Platform</h3>
-                        <p>I was part of the team that pioneered one of the first responsive banking websites at EverBank, creating seamless mobile experiences for 3,500+ clients through comprehensive user research and iterative design.</p>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <span class="metric-value">25%</span>
-                                <span class="metric-label">Lower bounce rate</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-value">3,500+</span>
-                                <span class="metric-label">Active users</span>
-                            </div>
+                    <span class="project-category">Financial Services</span>
+                    <h3 class="project-title">Responsive Banking Platform</h3>
+                    <p class="project-description">
+                        Pioneered one of the first responsive banking websites at EverBank, creating seamless mobile experiences for 3,500+ clients through comprehensive user research and iterative design.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">25%</span>
+                            <span class="metric-label">Lower bounce rate</span>
                         </div>
-                        <div class="project-tags">
-                            <span class="tag">User Research</span>
-                            <span class="tag">Responsive Design</span>
-                            <span class="tag">Usability Testing</span>
+                        <div class="metric">
+                            <span class="metric-value">3,500+</span>
+                            <span class="metric-label">Active users</span>
                         </div>
                     </div>
-                </div>
-
-                <!-- Project 2 - Design System -->
-                <div class="project reveal">
-                    <div class="project-visual" style="background: var(--gray-50); padding: 2rem;">
-                        <img src="https://stories.freepiklabs.com/storage/15140/Programming_Mesa-de-trabajo-1.svg" alt="Design System" style="width: 100%; height: 100%; object-fit: contain;">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-tag">Enterprise Design System</span>
-                        <h3>Marketplace Design System</h3>
-                        <p>Led accessibility initiatives and created a comprehensive component library for Red Hat Marketplace, achieving full WCAG 2.1 AA compliance and serving 12 cross-functional teams.</p>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <span class="metric-value">12</span>
-                                <span class="metric-label">Teams served</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-value">100%</span>
-                                <span class="metric-label">WCAG AA</span>
-                            </div>
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">Design Systems</span>
-                            <span class="tag">Accessibility</span>
-                            <span class="tag">Carbon Design</span>
-                        </div>
+                    <div class="project-tags">
+                        <span class="tag">User Research</span>
+                        <span class="tag">Responsive Design</span>
+                        <span class="tag">Usability Testing</span>
                     </div>
                 </div>
-
-                <!-- Project 3 - Defense -->
-                <div class="project reveal">
-                    <div class="project-visual" style="background: var(--gray-50); padding: 2rem;">
-                        <img src="https://stories.freepiklabs.com/storage/15184/Time-management_Mesa-de-trabajo-1.svg" alt="Military Planning" style="width: 100%; height: 100%; object-fit: contain;">
+                
+                <div class="project-card-glass">
+                    <div class="project-image">
+                        <img src="https://stories.freepiklabs.com/storage/15140/Programming_Mesa-de-trabajo-1.svg" alt="Design System">
                     </div>
-                    <div class="project-info">
-                        <span class="project-tag">Complex Systems</span>
-                        <h3>Defense Application UX</h3>
-                        <p>Leading end-to-end UX/UI design for military planning applications, conducting cognitive task analyses to translate complex operational requirements into intuitive multi-platform interfaces.</p>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <span class="metric-value">Multi</span>
-                                <span class="metric-label">Platform support</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-value">User</span>
-                                <span class="metric-label">Validated</span>
-                            </div>
+                    <span class="project-category">Enterprise Design System</span>
+                    <h3 class="project-title">Marketplace Design System</h3>
+                    <p class="project-description">
+                        Led accessibility initiatives and created a comprehensive component library for Red Hat Marketplace, achieving full WCAG 2.1 AA compliance and serving 12 cross-functional teams.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">12</span>
+                            <span class="metric-label">Teams served</span>
                         </div>
-                        <div class="project-tags">
-                            <span class="tag">Cognitive Analysis</span>
-                            <span class="tag">Native & Web</span>
-                            <span class="tag">High-Fidelity</span>
+                        <div class="metric">
+                            <span class="metric-value">100%</span>
+                            <span class="metric-label">WCAG AA</span>
                         </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Design Systems</span>
+                        <span class="tag">Accessibility</span>
+                        <span class="tag">Carbon Design</span>
                     </div>
                 </div>
-
-                <!-- Project 4 - React Components -->
-                <div class="project reveal">
-                    <div class="project-visual" style="background: var(--gray-50); padding: 2rem;">
-                        <img src="https://stories.freepiklabs.com/storage/15140/Code-typing_Mesa-de-trabajo-1.svg" alt="React Components" style="width: 100%; height: 100%; object-fit: contain;">
+                
+                <div class="project-card-glass">
+                    <div class="project-image">
+                        <img src="https://stories.freepiklabs.com/storage/15184/Time-management_Mesa-de-trabajo-1.svg" alt="Military Planning">
                     </div>
-                    <div class="project-info">
-                        <span class="project-tag">Component Development</span>
-                        <h3>React UI Component Library</h3>
-                        <p>Building a comprehensive library of reusable, accessible React components that demonstrate the bridge between design thinking and technical implementation across modern frameworks.</p>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <span class="metric-value">Reusable</span>
-                                <span class="metric-label">Components</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-value">React</span>
-                                <span class="metric-label">TypeScript</span>
-                            </div>
+                    <span class="project-category">Complex Systems</span>
+                    <h3 class="project-title">Defense Application UX</h3>
+                    <p class="project-description">
+                        Leading end-to-end UX/UI design for military planning applications, conducting cognitive task analyses to translate complex operational requirements into intuitive multi-platform interfaces.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">Multi</span>
+                            <span class="metric-label">Platform support</span>
                         </div>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Storybook</span>
-                            <span class="tag">TypeScript</span>
+                        <div class="metric">
+                            <span class="metric-value">User</span>
+                            <span class="metric-label">Validated</span>
                         </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Cognitive Analysis</span>
+                        <span class="tag">Native & Web</span>
+                        <span class="tag">High-Fidelity</span>
+                    </div>
+                </div>
+                
+                <div class="project-card-glass">
+                    <div class="project-image">
+                        <img src="https://stories.freepiklabs.com/storage/15140/Code-typing_Mesa-de-trabajo-1.svg" alt="React Components">
+                    </div>
+                    <span class="project-category">Component Development</span>
+                    <h3 class="project-title">React UI Component Library</h3>
+                    <p class="project-description">
+                        Building a comprehensive library of reusable, accessible React components that demonstrate the bridge between design thinking and technical implementation across modern frameworks.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">Reusable</span>
+                            <span class="metric-label">Components</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">React</span>
+                            <span class="metric-label">TypeScript</span>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Storybook</span>
+                        <span class="tag">TypeScript</span>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Additional Work -->
-            <div class="section-header reveal" style="margin-top: 6rem;">
-                <h2>More Experiments</h2>
-                <p>Creative coding, IoT, and design explorations</p>
+    <!-- More Experiments Section -->
+    <section class="experiments-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">More Experiments</h2>
+                <p class="section-subtitle">Creative coding, IoT, and design explorations</p>
             </div>
             
-            <div class="additional-grid">
-                <div class="mini-project reveal">
-                    <div class="mini-project-image" style="background: var(--gray-50); padding: 1.5rem;">
-                        <img src="https://stories.freepiklabs.com/storage/29396/Artificial-intelligence_Mesa-de-trabajo-1.svg" alt="NodeBots" style="width: 100%; height: 100%; object-fit: contain;">
+            <div class="experiments-grid">
+                <a href="https://www.behance.net/gallery/68148555/NodeBots-IoT-Experiments" target="_blank" class="experiment-card">
+                    <div class="experiment-image">
+                        <img src="https://stories.freepiklabs.com/storage/29396/Artificial-intelligence_Mesa-de-trabajo-1.svg" alt="NodeBots">
                     </div>
-                    <div class="mini-project-content">
-                        <span class="project-tag">IoT · Hardware</span>
-                        <h4>NodeBots IoT Experiments</h4>
-                        <p>Exploring Internet of Things and hardware interfacing using JavaScript and creative coding to bridge physical and digital experiences.</p>
-                        <a href="https://www.behance.net/gallery/68148555/NodeBots-IoT-Experiments" target="_blank" class="external-link">View on Behance →</a>
+                    <span class="experiment-category">IoT · Hardware</span>
+                    <h4>NodeBots IoT Experiments</h4>
+                    <p>Exploring Internet of Things and hardware interfacing using JavaScript and creative coding to bridge physical and digital experiences.</p>
+                    <span class="experiment-link">View on Behance →</span>
+                </a>
+                
+                <a href="https://www.behance.net/gallery/67810477/Tinsy-Co-A-jewelry-line-for-pet-lovers" target="_blank" class="experiment-card">
+                    <div class="experiment-image">
+                        <img src="https://stories.freepiklabs.com/storage/44311/Creative-team-CUATE_Mesa-de-trabajo-1.svg" alt="Tinsy Co">
                     </div>
-                </div>
-
-                <div class="mini-project reveal">
-                    <div class="mini-project-image" style="background: linear-gradient(135deg, #ffecd2, #fcb69f); padding: 1.5rem;">
-                        <img src="https://stories.freepiklabs.com/storage/44311/Creative-team-CUATE_Mesa-de-trabajo-1.svg" alt="Tinsy Co" style="width: 100%; height: 100%; object-fit: contain;">
+                    <span class="experiment-category">Brand · E-commerce</span>
+                    <h4>Tinsy Co Jewelry Brand</h4>
+                    <p>Complete brand identity and e-commerce design for a jewelry line celebrating pet lovers, including product design and photography.</p>
+                    <span class="experiment-link">View on Behance →</span>
+                </a>
+                
+                <a href="https://www.behance.net/gallery/67962193/Digital-and-Hand-Illustrations" target="_blank" class="experiment-card">
+                    <div class="experiment-image">
+                        <img src="https://stories.freepiklabs.com/storage/44275/Good-team_Mesa-de-trabajo-1.svg" alt="Illustrations">
                     </div>
-                    <div class="mini-project-content">
-                        <span class="project-tag">Brand · E-commerce</span>
-                        <h4>Tinsy Co Jewelry Brand</h4>
-                        <p>Complete brand identity and e-commerce design for a jewelry line celebrating pet lovers, including product design and photography.</p>
-                        <a href="https://www.behance.net/gallery/67810477/Tinsy-Co-A-jewelry-line-for-pet-lovers" target="_blank" class="external-link">View on Behance →</a>
-                    </div>
-                </div>
-
-                <div class="mini-project reveal">
-                    <div class="mini-project-image" style="background: var(--gray-50); padding: 1.5rem;">
-                        <img src="https://stories.freepiklabs.com/storage/44275/Good-team_Mesa-de-trabajo-1.svg" alt="Illustrations" style="width: 100%; height: 100%; object-fit: contain;">
-                    </div>
-                    <div class="mini-project-content">
-                        <span class="project-tag">Illustration</span>
-                        <h4>Digital Illustrations</h4>
-                        <p>Collection of digital and traditional illustrations showcasing visual design skills across Adobe Creative Suite.</p>
-                        <a href="https://www.behance.net/gallery/67962193/Digital-and-Hand-Illustrations" target="_blank" class="external-link">View on Behance →</a>
-                    </div>
-                </div>
+                    <span class="experiment-category">Illustration</span>
+                    <h4>Digital Illustrations</h4>
+                    <p>Collection of digital and traditional illustrations showcasing visual design skills across Adobe Creative Suite.</p>
+                    <span class="experiment-link">View on Behance →</span>
+                </a>
             </div>
-
+            
             <div style="text-align: center; margin-top: 3rem;">
-                <a href="https://www.behance.net/Jannaee" target="_blank" class="btn btn-primary"><span>View Full Portfolio →</span></a>
+                <a href="https://www.behance.net/Jannaee" target="_blank" class="btn btn-primary glow-effect">
+                    <span>View Full Portfolio</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Process Section -->
-    <section id="process" class="process-section">
+    <section class="process-section" id="process">
         <div class="container">
-            <div class="section-header reveal">
-                <h2>How I Work</h2>
-                <p>A research-driven, iterative approach to design</p>
+            <div class="section-header">
+                <h2 class="section-title">How I Work</h2>
+                <p class="section-subtitle">A research-driven, iterative approach to design</p>
             </div>
-            <div class="process-timeline">
-                <div class="process-step reveal">
+            
+            <div class="process-steps">
+                <div class="process-step">
                     <div class="step-number">1</div>
                     <h4>Research</h4>
                     <p>User interviews, analytics, competitive analysis, stakeholder alignment</p>
                 </div>
-                <div class="process-step reveal">
+                
+                <div class="process-step">
                     <div class="step-number">2</div>
                     <h4>Define</h4>
                     <p>Journey mapping, personas, problem framing, success metrics</p>
                 </div>
-                <div class="process-step reveal">
+                
+                <div class="process-step">
                     <div class="step-number">3</div>
                     <h4>Ideate</h4>
                     <p>Wireframing, information architecture, design exploration</p>
                 </div>
-                <div class="process-step reveal">
+                
+                <div class="process-step">
                     <div class="step-number">4</div>
                     <h4>Prototype</h4>
                     <p>Interactive prototypes, visual design, components</p>
                 </div>
-                <div class="process-step reveal">
+                
+                <div class="process-step">
                     <div class="step-number">5</div>
                     <h4>Test</h4>
                     <p>Usability testing, A/B testing, iteration</p>
                 </div>
-                <div class="process-step reveal">
+                
+                <div class="process-step">
                     <div class="step-number">6</div>
                     <h4>Deliver</h4>
                     <p>Developer handoff, implementation, tracking</p>
@@ -302,103 +1432,37 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>About Me</h2>
-            </div>
-            <div class="about-content">
-                <p class="reveal">I'm a UX/UI Designer and Front-End Engineer with <strong>7+ years of experience</strong> creating user-centered digital experiences across financial services, enterprise software, healthcare, and defense sectors.</p>
-                
-                <p class="reveal">My unique combination of design expertise and technical implementation skills allows me to bridge the gap between design vision and development reality. I'm passionate about <strong>accessibility</strong>, <strong>design systems</strong>, and creating experiences that work for all users.</p>
-                
-                <p class="reveal">As an <strong>IBM-certified Enterprise Design Thinking Practitioner</strong> and <strong>Google Mobile Web Specialist</strong>, I bring rigorous methodology to every project. I've been recognized through IBM's Aspiring Leaders program and have spoken at All Things Open on topics ranging from React testing to STEM education.</p>
-                
-                <p class="reveal">When I'm not designing or coding, you'll find me with my family and dogs walking, hiking, or playing in the Umstead State Park.</p>
-                
-                <div class="tools-showcase reveal">
-                    <span class="tool">Figma</span>
-                    <span class="tool">Adobe Creative Suite</span>
-                    <span class="tool">React</span>
-                    <span class="tool">Angular</span>
-                    <span class="tool">TypeScript</span>
-                    <span class="tool">Storybook</span>
-                    <span class="tool">IBM Carbon</span>
-                    <span class="tool">Enterprise Design Thinking</span>
-                    <span class="tool">HTML/CSS/JavaScript</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
+    <!-- Kind Words (Testimonials) Section -->
     <section class="testimonials-section">
         <div class="container">
-            <div class="section-header reveal">
-                <h2>Kind Words</h2>
-                <p>What colleagues and clients have to say</p>
+            <div class="section-header">
+                <h2 class="section-title">Kind Words</h2>
+                <p class="section-subtitle">What colleagues and clients have to say</p>
             </div>
             
-            <div class="testimonials-carousel reveal">
-                <button class="carousel-button prev" aria-label="Previous testimonial">‹</button>
-                <button class="carousel-button next" aria-label="Next testimonial">›</button>
-                
-                <div class="testimonial-track">
-                    <!-- Baris S.-->
-                    <div class="testimonial">
-                        <div class="testimonial-content">
-                            <p class="testimonial-quote">
-                                She's great at slowing complex issues down, explaining her thinking clearly, and keeping the user experience front and center. She's a strong engineer, a genuine collaborator, and any team would be lucky to have her.
-                            </p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="author-image">BS</div>
-                            <div class="author-info">
-                                <div class="author-name">Baris S.</div>
-                                <div class="author-title">Staff Software Engineer II Applied Research Associates (ARA)</div>
-                            </div>
-                        </div>
+            <div class="testimonial-card-glass">
+                <p class="testimonial-text">
+                    She's great at slowing complex issues down, explaining her thinking clearly, and keeping the user experience front and center. She's a strong engineer, a genuine collaborator, and any team would be lucky to have her.
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">BS</div>
+                    <div class="author-info">
+                        <div class="author-name">Baris S.</div>
+                        <div class="author-title">Staff Software Engineer II, Applied Research Associates (ARA)</div>
                     </div>
-
-                    <!-- Testimonial 2 -->
-                    <div class="testimonial">
-                        <div class="testimonial-content">
-                            <p class="testimonial-quote">
-                                Not only is she clearly an expert at user interface design, but she really knows how to articulate and communicate her work in ways that promote teamwork and open communication. She seeks involvement and feedback from many stakeholders during the planning & design stages, with the clear end goal of a great user experience.
-                            </p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="author-image">VH</div>
-                            <div class="author-info">
-                                <div class="author-name">Vincent H.</div>
-                                <div class="author-title">Principal Scientist, Applied Research Associates (ARA)</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Testimonial 3 -->
-                    <div class="testimonial">
-                        <div class="testimonial-content">
-                            <p class="testimonial-quote">
-                                Lorem ipsum
-                            </p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="author-image">CS</div>
-                            <div class="author-info">
-                                <div class="author-name">Coming Soon</div>
-                                <div class="author-title">Coming Soon</div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-                
-                <div class="carousel-indicators">
-                    <span class="indicator active" data-slide="0"></span>
-                    <span class="indicator" data-slide="1"></span>
-                    <span class="indicator" data-slide="2"></span>
+            </div>
+            
+            <div class="testimonial-card-glass" style="margin-top: 2rem;">
+                <p class="testimonial-text">
+                    Not only is she clearly an expert at user interface design, but she really knows how to articulate and communicate her work in ways that promote teamwork and open communication. She seeks involvement and feedback from many stakeholders during the planning & design stages, with the clear end goal of a great user experience.
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">VH</div>
+                    <div class="author-info">
+                        <div class="author-name">Vincent H.</div>
+                        <div class="author-title">Principal Scientist, Applied Research Associates (ARA)</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -407,100 +1471,141 @@
     <!-- Certifications Section -->
     <section class="certifications-section">
         <div class="container">
-            <div class="section-header reveal">
-                <h2>Certifications & Recognition</h2>
-                <p>Continuous learning and professional development</p>
+            <div class="section-header">
+                <h2 class="section-title">Certifications & Recognition</h2>
+                <p class="section-subtitle">Continuous learning and professional development</p>
             </div>
             
-            <div class="badges-grid">
-                <!-- IBM Enterprise Design Thinking - Your uploaded badge! -->
-                <div class="badge-container reveal">
-                    <img src="assets/Badges_v8-07_Practitioner.png" alt="IBM Enterprise Design Thinking Practitioner" class="badge-image">
-                    <div class="badge-name">Enterprise Design Thinking Practitioner</div>
-                    <div class="badge-issuer">IBM</div>
-                    <div class="badge-date">2023</div>
-                </div>
-
-                <!-- Google Mobile Web Specialist -->
-                <div class="badge-container reveal">
-                    <img src="/portfolio/jannaee.github.io/assets/Mobile-Web-Specialist-Badge.png" alt="Mobile Web Specialist by Google Developers" class="badge-image">
-                    <div class="badge-name">Mobile Web Specialist</div>
-                    <div class="badge-issuer"><a href="https://developers.googleblog.com/introducing-the-mobile-web-specialist-certification-by-google-developers/" target="_blank">Google & Udacity</a></div>
-                    <div class="badge-date">2018</div>
-                </div>
-
-                <!-- IBM Agile Explorer -->
-                <div class="badge-container reveal">
-                    <div class="badge-image" style="display: flex; align-items: center; justify-content: center;  color: white; border-radius: 50%; font-size: 2rem; font-weight: 700;">
-                        <img src="assets/agile-explorer-big.png" alt="IBM Enterprise Design Thinking Practitioner" class="badge-image">
+            <div class="certifications-grid">
+                <div class="certification-card-glass">
+                    <div class="cert-badge">
+                        <img src="assets/Badges_v8-07_Practitioner.png" alt="IBM Enterprise Design Thinking Practitioner">
                     </div>
-                    <div class="badge-name">Agile Explorer Certification</div>
-                    <div class="badge-issuer">IBM</div>
-                    <div class="badge-date">2019</div>
+                    <h3 class="cert-title">Enterprise Design Thinking Practitioner</h3>
+                    <p class="cert-org">IBM</p>
+                    <p class="cert-year">2023</p>
                 </div>
-
-                <!-- IDEO Creative Leadership -->
-                <div class="badge-container reveal">
-                    <div class="badge-image" style="display: flex; align-items: center; justify-content: center;  color: white; border-radius: 50%; font-size: 2rem; font-weight: 700;">
-                        <img src="assets/Creative-Leadership-IDEO-U.png"  alt="Creative Leadership by IDEO University" class="badge-image">
-                    </div>                    
-                    <div class="badge-name">Creative Leadership</div>
-                    <div class="badge-issuer"><a href="https://certificates.ideou.com/7b156907-b08a-4582-9a79-249e862c880e#acc.FTKbya8M" target="_blank">IDEO University</a></div>
-                    <div class="badge-date">2026</div>
-                </div>
-
-                <!-- IBM People's Choice Award -->
-                <div class="badge-container reveal">
-                    <div class="badge-image" style="display: flex; align-items: center; justify-content: center;  color: white; border-radius: 50%; font-size: 2rem; font-weight: 700;">
-                        <img src="assets/PeoplesChoice.png"  alt="People's Choice Award by Red Hat Marketplace operated by IBM" class="badge-image">
+                
+                <div class="certification-card-glass">
+                    <div class="cert-badge">
+                        <img src="assets/Mobile-Web-Specialist-Badge.png" alt="Mobile Web Specialist">
                     </div>
-                    <div class="badge-name">People's Choice Award</div>
-                    <div class="badge-issuer">IBM</div>
-                    <div class="badge-date">2020</div>
+                    <h3 class="cert-title">Mobile Web Specialist</h3>
+                    <p class="cert-org">Google & Udacity</p>
+                    <p class="cert-year">2018</p>
                 </div>
-
-                <!-- Code.gov Hackathon Winner -->
-                <div class="badge-container reveal">
-                    <div class="badge-image" style="display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--yellow), var(--yellow-bright)); color: var(--navy-deep); border-radius: 50%; font-size: 2.5rem; font-weight: 700;">💻</div>
-                    <div class="badge-name">Hackathon Winner</div>
-                    <div class="badge-issuer"><a href="https://code.gov/hackathon/" target="_blank">Code.gov</a></div>
-                    <div class="badge-date">2019</div>
+                
+                <div class="certification-card-glass">
+                    <div class="cert-badge">
+                        <img src="assets/agile-explorer-big.png" alt="Agile Explorer">
+                    </div>
+                    <h3 class="cert-title">Agile Explorer Certification</h3>
+                    <p class="cert-org">IBM</p>
+                    <p class="cert-year">2019</p>
                 </div>
-
-                <!-- Add more badges here - just copy one of the above divs -->
+                
+                <div class="certification-card-glass">
+                    <div class="cert-badge">
+                        <img src="assets/Creative-Leadership-IDEO-U.png" alt="Creative Leadership">
+                    </div>
+                    <h3 class="cert-title">Creative Leadership</h3>
+                    <p class="cert-org">IDEO University</p>
+                    <p class="cert-year">2026</p>
+                </div>
+                
+                <div class="certification-card-glass">
+                    <div class="cert-badge">
+                        <img src="assets/PeoplesChoice.png" alt="People's Choice Award">
+                    </div>
+                    <h3 class="cert-title">People's Choice Award</h3>
+                    <p class="cert-org">IBM</p>
+                    <p class="cert-year">2020</p>
+                </div>
+                
+                <div class="certification-card-glass">
+                    <div class="cert-badge">
+                        <div style="font-size: 3rem;">💻</div>
+                    </div>
+                    <h3 class="cert-title">Hackathon Winner</h3>
+                    <p class="cert-org">Code.gov</p>
+                    <p class="cert-year">2019</p>
+                </div>
             </div>
-
-            <div style="text-align: center; margin-top: 2.5rem;">
-                <p style="color: var(--navy-medium); font-size: 0.95rem;">
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="color: rgba(255, 255, 255, 0.7);">
                     View all my credentials on 
-                    <a href="https://www.credly.com/users/jannaee-sick.0ecca8f2/badges#credly" target="_blank" style="color: var(--cyan); text-decoration: none; font-weight: 600;">Credly →</a>
+                    <a href="https://www.credly.com/users/jannaee-sick.0ecca8f2/badges#credly" target="_blank" style="color: var(--cyan); font-weight: 600;">Credly →</a>
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
+    <!-- About Section -->
+    <section class="about-section" id="about">
         <div class="container">
-            <div class="section-header reveal" >
-                <h2>Let's Connect</h2>
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
             </div>
-            <div class="contact-links reveal">
-                <a href="https://linkedin.com/in/jannaee" class="contact-card" target="_blank">
-                    <span class="icon">💼</span>
-                    <span>LinkedIn</span>
+            
+            <div class="about-content">
+                <p>
+                    I'm a UX/UI Designer and Front-End Engineer with <strong>7+ years of experience</strong> creating user-centered digital experiences across financial services, enterprise software, healthcare, and defense sectors.
+                </p>
+                
+                <p>
+                    My unique combination of design expertise and technical implementation skills allows me to bridge the gap between design vision and development reality. I'm passionate about <strong>accessibility</strong>, <strong>design systems</strong>, and creating experiences that work for all users.
+                </p>
+                
+                <p>
+                    As an <strong>IBM-certified Enterprise Design Thinking Practitioner</strong> and <strong>Google Mobile Web Specialist</strong>, I bring rigorous methodology to every project. I've been recognized through IBM's Aspiring Leaders program and have spoken at All Things Open on topics ranging from React testing to STEM education.
+                </p>
+                
+                <p>
+                    When I'm not designing or coding, you'll find me with my family and dogs walking, hiking, or playing in the Umstead State Park.
+                </p>
+                
+                <div class="about-skills">
+                    <span class="about-skill">Figma</span>
+                    <span class="about-skill">Adobe Creative Suite</span>
+                    <span class="about-skill">React</span>
+                    <span class="about-skill">Angular</span>
+                    <span class="about-skill">TypeScript</span>
+                    <span class="about-skill">Storybook</span>
+                    <span class="about-skill">IBM Carbon</span>
+                    <span class="about-skill">Enterprise Design Thinking</span>
+                    <span class="about-skill">HTML/CSS/JavaScript</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Connect</h2>
+            </div>
+            
+            <div class="contact-links">
+                <a href="https://linkedin.com/in/jannaee" target="_blank" class="contact-link">
+                    <span>💼</span>
+                    <div>LinkedIn</div>
                 </a>
-                <a href="https://www.behance.net/Jannaee" class="contact-card" target="_blank">
-                    <span class="icon">🎨</span>
-                    <span>Behance</span>
+                
+                <a href="https://www.behance.net/Jannaee" target="_blank" class="contact-link">
+                    <span>🎨</span>
+                    <div>Behance</div>
                 </a>
-                <a href="https://github.com/jannaee" class="contact-card" target="_blank">
-                    <span class="icon">💻</span>
-                    <span>GitHub</span>
+                
+                <a href="https://github.com/jannaee" target="_blank" class="contact-link">
+                    <span>💻</span>
+                    <div>GitHub</div>
                 </a>
-                <a href="https://jannaee.github.io/protected.html" class="contact-card" target="_blank">
-                    <span class="icon">🔒</span>                        
-                    <span>Recruiters Only</span>
+                
+                <a href="https://jannaee.github.io/protected.html" class="contact-link">
+                    <span>🔒</span>
+                    <div>Recruiters Only</div>
                 </a>
             </div>
         </div>
@@ -508,11 +1613,10 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>© 2026 Jannaee Sick. Built with <span class="heart">❤</span> and a lot of coffee.</p>
-        </div>
+        <p>© 2026 Jannaee Sick. Built with ❤️ and a lot of coffee.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.875rem; opacity: 0.7;">
+            Designed with creative collaboration from Claude (Anthropic)
+        </p>
     </footer>
-<script src="script-two.js"></script>
-
 </body>
 </html>
